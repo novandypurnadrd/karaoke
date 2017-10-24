@@ -1,0 +1,70 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_nip}
+			<a href="#" id="addSearchControl_nip" class="addSearchControl" {$addSearchControl_nip_attrs}>NIP</a><br>
+		{END addSearch_nip}
+		{BEGIN addSearch_nama}
+			<a href="#" id="addSearchControl_nama" class="addSearchControl" {$addSearchControl_nama_attrs}>NAMA</a><br>
+		{END addSearch_nama}
+		{BEGIN addSearch_dept}
+			<a href="#" id="addSearchControl_dept" class="addSearchControl" {$addSearchControl_dept_attrs}>DEPARTEMEN</a><br>
+		{END addSearch_dept}
+		{BEGIN addSearch_section}
+			<a href="#" id="addSearchControl_section" class="addSearchControl" {$addSearchControl_section_attrs}>SECTION</a><br>
+		{END addSearch_section}
+		{BEGIN addSearch_posisi}
+			<a href="#" id="addSearchControl_posisi" class="addSearchControl" {$addSearchControl_posisi_attrs}>POSISI</a><br>
+		{END addSearch_posisi}
+		{BEGIN addSearch_tglpay}
+			<a href="#" id="addSearchControl_tglpay" class="addSearchControl" {$addSearchControl_tglpay_attrs}>TGL PEMBAYARAN</a><br>
+		{END addSearch_tglpay}
+		{BEGIN addSearch_referensi}
+			<a href="#" id="addSearchControl_referensi" class="addSearchControl" {$addSearchControl_referensi_attrs}>REFERENSI</a><br>
+		{END addSearch_referensi}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

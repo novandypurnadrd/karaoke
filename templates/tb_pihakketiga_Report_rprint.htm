@@ -1,0 +1,144 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--%%pagestyle%%-->
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+			
+
+
+
+{BEGIN container_grid}
+
+
+
+{BEGIN pages}
+<h1>REPORT PIHAK KETIGA</h1>
+	<span {$pages_attrs}>
+		Page <b>{$pageno}</b> of <b>{$maxpages}</b>
+	</span>
+
+
+			<style>
+table.report {border-collapse: collapse} 
+table.report td {padding: 2px;border-width: 1px; border-style: solid; border-color: #cccccc;}
+div.page_block{clear:left;}
+td.noborder{padding-right:8px}
+td.data{padding-right:8px}
+td.group_1{background-color: #90EE90;}
+td.group_2{background-color: #ADD8E6;}
+td.group_3{background-color: #FFB6C1;}
+td.group_4{background-color: #FFFACD;}
+td.nbgroup_1{background-color: #90EE90;border-style:none;}
+td.nbgroup_2{background-color: #ADD8E6;border-style:none;}
+td.nbgroup_3{background-color: #FFB6C1;border-style:none;}
+td.nbgroup_4{background-color: #FFFACD;border-style:none;}
+td.header_1{background-color: #7ACA7A;}
+td.header_2{background-color: #93B7C3;}
+td.header_3{background-color: #D89AA4;}
+td.header_4{background-color: #D8D4AE;}
+td.pagesummary{background-color:#ffffbb;}
+td.globalsummary{background-color:#ffe0b0;}
+</style>
+<div id="grid_block{$id}">
+<TABLE CELLPADDING=5 CELLSPACING=0 BORDER=0>
+	<tr class="runner-toprow style1">
+		<td class="runner-cl"><img src="images/spacer.gif"/></td>
+		<td class="runner-cc"></td>
+		<td class="runner-cr"><img src="images/spacer.gif"/></td>
+	</tr>
+	<tr class="runner-row style1">
+		<td class="runner-cl"></td>
+		<td class="runner-cc">
+			<table cellspacing=0 cellpadding=0 border=0 style="padding:2px">
+			{BEGIN grid_row}
+			<!-------------------------------------  group headers ----------------------------------------->
+			{BEGIN nomer1_newgroup}
+								<tr>
+					<td>NO</td>
+					<td>NAMA INSTANSI</td>
+					<td>JENIS PENGELUARAN</td>
+					<td>JUMLAH PEMBAYARAN</td>
+					<td>ID</td>
+				</tr>
+				<tr>
+											<td colspan=5 class=header_1><font style="font-weight:900">{$nomer1_grval}</font></td>
+																						</tr>
+			{END nomer1_newgroup}
+			{BEGIN namainstansi_newgroup}
+								<tr>
+											<td class="noborder group_1" style="border-style:none;">&nbsp;</td>
+											<td colspan=4 class=header_2><font style="font-weight:900">{$namainstansi_grval}</font></td>
+																</tr>
+			{END namainstansi_newgroup}
+			{BEGIN jeniskeluar_newgroup}
+								<tr>
+											<td class="noborder group_1" style="border-style:none;">&nbsp;</td>
+											<td class="noborder group_2" style="border-style:none;">&nbsp;</td>
+											<td colspan=3 class=header_3><font style="font-weight:900">{$jeniskeluar_grval}</font></td>
+										</tr>
+			{END jeniskeluar_newgroup}
+			{BEGIN amount_newgroup}
+								<tr>
+											<td class="noborder group_1" style="border-style:none;">&nbsp;</td>
+											<td class="noborder group_2" style="border-style:none;">&nbsp;</td>
+											<td class="noborder group_3" style="border-style:none;">&nbsp;</td>
+											<td colspan=2 class=header_4><font style="font-weight:900">{$amount_grval}</font></td>
+				</tr>
+			{END amount_newgroup}
+						<!-------------------------------------  group summary ----------------------------------------->
+															{END grid_row}
+			</table>
+		</td>
+		<td class="runner-cr"></td>
+	</tr>
+	<tr class="runner-row style1">
+		<td class="runner-cl"></td>
+		<td class="runner-cc">
+			<table cellspacing=0 cellpadding=0 border=0>
+<!--				-->
+											</table>
+		</td>
+		<td class="runner-cr"></td>
+	</tr>
+	<tr class="runner-bottomrow style1">
+		<td class="runner-cl"><img src="images/spacer.gif"/></td>
+		<td class="runner-cc"></td>
+		<td class="runner-cr"><img src="images/spacer.gif"/></td>
+	</tr>
+</table>
+</div>
+
+{END pages}
+
+
+
+
+
+{END container_grid}
+
+
+	{END body}
+	</body>
+</html>

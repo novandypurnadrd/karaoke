@@ -1,0 +1,382 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Db Karyawan</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN Id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Id_fieldheader}
+	<b>Id</b>
+	{END Id_fieldheader}
+</th>
+{END Id_fieldheadercolumn}
+	{BEGIN NIK_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN NIK_fieldheader}
+	<b>NIK</b>
+	{END NIK_fieldheader}
+</th>
+{END NIK_fieldheadercolumn}
+	{BEGIN Nama_Karyawan_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Nama_Karyawan_fieldheader}
+	<b>Nama Karyawan</b>
+	{END Nama_Karyawan_fieldheader}
+</th>
+{END Nama_Karyawan_fieldheadercolumn}
+	{BEGIN Sex_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Sex_fieldheader}
+	<b>Sex</b>
+	{END Sex_fieldheader}
+</th>
+{END Sex_fieldheadercolumn}
+	{BEGIN POB_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN POB_fieldheader}
+	<b>POB</b>
+	{END POB_fieldheader}
+</th>
+{END POB_fieldheadercolumn}
+	{BEGIN DOB_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DOB_fieldheader}
+	<b>DOB</b>
+	{END DOB_fieldheader}
+</th>
+{END DOB_fieldheadercolumn}
+	{BEGIN Tax_Status_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Tax_Status_fieldheader}
+	<b>Tax Status</b>
+	{END Tax_Status_fieldheader}
+</th>
+{END Tax_Status_fieldheadercolumn}
+	{BEGIN Address_Nama_Jalan_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Address_Nama_Jalan_fieldheader}
+	<b>Address Nama Jalan</b>
+	{END Address_Nama_Jalan_fieldheader}
+</th>
+{END Address_Nama_Jalan_fieldheadercolumn}
+	{BEGIN Address_Nama_Desa_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Address_Nama_Desa_fieldheader}
+	<b>Address Nama Desa</b>
+	{END Address_Nama_Desa_fieldheader}
+</th>
+{END Address_Nama_Desa_fieldheadercolumn}
+	{BEGIN Address_Nama_Kec_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Address_Nama_Kec_fieldheader}
+	<b>Address Nama Kec</b>
+	{END Address_Nama_Kec_fieldheader}
+</th>
+{END Address_Nama_Kec_fieldheadercolumn}
+	{BEGIN Address_Nama_Kab_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Address_Nama_Kab_fieldheader}
+	<b>Address Nama Kab</b>
+	{END Address_Nama_Kab_fieldheader}
+</th>
+{END Address_Nama_Kab_fieldheadercolumn}
+	{BEGIN Address_Nama_Prov_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Address_Nama_Prov_fieldheader}
+	<b>Address Nama Prov</b>
+	{END Address_Nama_Prov_fieldheader}
+</th>
+{END Address_Nama_Prov_fieldheadercolumn}
+	{BEGIN Telp_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Telp_fieldheader}
+	<b>Telp</b>
+	{END Telp_fieldheader}
+</th>
+{END Telp_fieldheadercolumn}
+	{BEGIN Position_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Position_fieldheader}
+	<b>Position</b>
+	{END Position_fieldheader}
+</th>
+{END Position_fieldheadercolumn}
+	{BEGIN Classification_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Classification_fieldheader}
+	<b>Classification</b>
+	{END Classification_fieldheader}
+</th>
+{END Classification_fieldheadercolumn}
+	{BEGIN Section_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Section_fieldheader}
+	<b>Section</b>
+	{END Section_fieldheader}
+</th>
+{END Section_fieldheadercolumn}
+	{BEGIN Department_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Department_fieldheader}
+	<b>Department</b>
+	{END Department_fieldheader}
+</th>
+{END Department_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN Id_fieldcolumn}
+<td  class="runner-cc {$Id_class}" {$Id_style}>
+	{$Id_value}
+</td>
+{END Id_fieldcolumn}
+	{BEGIN NIK_fieldcolumn}
+<td  class="runner-cc {$NIK_class}" {$NIK_style}>
+	{$NIK_value}
+</td>
+{END NIK_fieldcolumn}
+	{BEGIN Nama_Karyawan_fieldcolumn}
+<td  class="runner-cc {$Nama_Karyawan_class}" {$Nama_Karyawan_style}>
+	{$Nama_Karyawan_value}
+</td>
+{END Nama_Karyawan_fieldcolumn}
+	{BEGIN Sex_fieldcolumn}
+<td  class="runner-cc {$Sex_class}" {$Sex_style}>
+	{$Sex_value}
+</td>
+{END Sex_fieldcolumn}
+	{BEGIN POB_fieldcolumn}
+<td  class="runner-cc {$POB_class}" {$POB_style}>
+	{$POB_value}
+</td>
+{END POB_fieldcolumn}
+	{BEGIN DOB_fieldcolumn}
+<td  class="runner-cc {$DOB_class}" {$DOB_style}>
+	{$DOB_value}
+</td>
+{END DOB_fieldcolumn}
+	{BEGIN Tax_Status_fieldcolumn}
+<td  class="runner-cc {$Tax_Status_class}" {$Tax_Status_style}>
+	{$Tax_Status_value}
+</td>
+{END Tax_Status_fieldcolumn}
+	{BEGIN Address_Nama_Jalan_fieldcolumn}
+<td  class="runner-cc {$Address_Nama_Jalan_class}" {$Address_Nama_Jalan_style}>
+	{$Address_Nama_Jalan_value}
+</td>
+{END Address_Nama_Jalan_fieldcolumn}
+	{BEGIN Address_Nama_Desa_fieldcolumn}
+<td  class="runner-cc {$Address_Nama_Desa_class}" {$Address_Nama_Desa_style}>
+	{$Address_Nama_Desa_value}
+</td>
+{END Address_Nama_Desa_fieldcolumn}
+	{BEGIN Address_Nama_Kec_fieldcolumn}
+<td  class="runner-cc {$Address_Nama_Kec_class}" {$Address_Nama_Kec_style}>
+	{$Address_Nama_Kec_value}
+</td>
+{END Address_Nama_Kec_fieldcolumn}
+	{BEGIN Address_Nama_Kab_fieldcolumn}
+<td  class="runner-cc {$Address_Nama_Kab_class}" {$Address_Nama_Kab_style}>
+	{$Address_Nama_Kab_value}
+</td>
+{END Address_Nama_Kab_fieldcolumn}
+	{BEGIN Address_Nama_Prov_fieldcolumn}
+<td  class="runner-cc {$Address_Nama_Prov_class}" {$Address_Nama_Prov_style}>
+	{$Address_Nama_Prov_value}
+</td>
+{END Address_Nama_Prov_fieldcolumn}
+	{BEGIN Telp_fieldcolumn}
+<td  class="runner-cc {$Telp_class}" {$Telp_style}>
+	{$Telp_value}
+</td>
+{END Telp_fieldcolumn}
+	{BEGIN Position_fieldcolumn}
+<td  class="runner-cc {$Position_class}" {$Position_style}>
+	{$Position_value}
+</td>
+{END Position_fieldcolumn}
+	{BEGIN Classification_fieldcolumn}
+<td  class="runner-cc {$Classification_class}" {$Classification_style}>
+	{$Classification_value}
+</td>
+{END Classification_fieldcolumn}
+	{BEGIN Section_fieldcolumn}
+<td  class="runner-cc {$Section_class}" {$Section_style}>
+	{$Section_value}
+</td>
+{END Section_fieldcolumn}
+	{BEGIN Department_fieldcolumn}
+<td  class="runner-cc {$Department_class}" {$Department_style}>
+	{$Department_value}
+</td>
+{END Department_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN Id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Id_fieldfootercolumn}
+{BEGIN NIK_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END NIK_fieldfootercolumn}
+{BEGIN Nama_Karyawan_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Nama_Karyawan_fieldfootercolumn}
+{BEGIN Sex_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Sex_fieldfootercolumn}
+{BEGIN POB_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END POB_fieldfootercolumn}
+{BEGIN DOB_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DOB_fieldfootercolumn}
+{BEGIN Tax_Status_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Tax_Status_fieldfootercolumn}
+{BEGIN Address_Nama_Jalan_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Address_Nama_Jalan_fieldfootercolumn}
+{BEGIN Address_Nama_Desa_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Address_Nama_Desa_fieldfootercolumn}
+{BEGIN Address_Nama_Kec_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Address_Nama_Kec_fieldfootercolumn}
+{BEGIN Address_Nama_Kab_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Address_Nama_Kab_fieldfootercolumn}
+{BEGIN Address_Nama_Prov_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Address_Nama_Prov_fieldfootercolumn}
+{BEGIN Telp_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Telp_fieldfootercolumn}
+{BEGIN Position_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Position_fieldfootercolumn}
+{BEGIN Classification_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Classification_fieldfootercolumn}
+{BEGIN Section_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Section_fieldfootercolumn}
+{BEGIN Department_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END Department_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

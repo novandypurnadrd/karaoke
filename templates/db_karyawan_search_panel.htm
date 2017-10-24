@@ -1,0 +1,100 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_Id}
+			<a href="#" id="addSearchControl_Id" class="addSearchControl" {$addSearchControl_Id_attrs}>Id</a><br>
+		{END addSearch_Id}
+		{BEGIN addSearch_NIK}
+			<a href="#" id="addSearchControl_NIK" class="addSearchControl" {$addSearchControl_NIK_attrs}>NIK</a><br>
+		{END addSearch_NIK}
+		{BEGIN addSearch_Nama_Karyawan}
+			<a href="#" id="addSearchControl_Nama_Karyawan" class="addSearchControl" {$addSearchControl_Nama_Karyawan_attrs}>Nama Karyawan</a><br>
+		{END addSearch_Nama_Karyawan}
+		{BEGIN addSearch_Sex}
+			<a href="#" id="addSearchControl_Sex" class="addSearchControl" {$addSearchControl_Sex_attrs}>Sex</a><br>
+		{END addSearch_Sex}
+		{BEGIN addSearch_POB}
+			<a href="#" id="addSearchControl_POB" class="addSearchControl" {$addSearchControl_POB_attrs}>POB</a><br>
+		{END addSearch_POB}
+		{BEGIN addSearch_DOB}
+			<a href="#" id="addSearchControl_DOB" class="addSearchControl" {$addSearchControl_DOB_attrs}>DOB</a><br>
+		{END addSearch_DOB}
+		{BEGIN addSearch_Tax_Status}
+			<a href="#" id="addSearchControl_Tax_Status" class="addSearchControl" {$addSearchControl_Tax_Status_attrs}>Tax Status</a><br>
+		{END addSearch_Tax_Status}
+		{BEGIN addSearch_Address_Nama_Jalan}
+			<a href="#" id="addSearchControl_Address_Nama_Jalan" class="addSearchControl" {$addSearchControl_Address_Nama_Jalan_attrs}>Address Nama Jalan</a><br>
+		{END addSearch_Address_Nama_Jalan}
+		{BEGIN addSearch_Address_Nama_Desa}
+			<a href="#" id="addSearchControl_Address_Nama_Desa" class="addSearchControl" {$addSearchControl_Address_Nama_Desa_attrs}>Address Nama Desa</a><br>
+		{END addSearch_Address_Nama_Desa}
+		{BEGIN addSearch_Address_Nama_Kec}
+			<a href="#" id="addSearchControl_Address_Nama_Kec" class="addSearchControl" {$addSearchControl_Address_Nama_Kec_attrs}>Address Nama Kec</a><br>
+		{END addSearch_Address_Nama_Kec}
+		{BEGIN addSearch_Address_Nama_Kab}
+			<a href="#" id="addSearchControl_Address_Nama_Kab" class="addSearchControl" {$addSearchControl_Address_Nama_Kab_attrs}>Address Nama Kab</a><br>
+		{END addSearch_Address_Nama_Kab}
+		{BEGIN addSearch_Address_Nama_Prov}
+			<a href="#" id="addSearchControl_Address_Nama_Prov" class="addSearchControl" {$addSearchControl_Address_Nama_Prov_attrs}>Address Nama Prov</a><br>
+		{END addSearch_Address_Nama_Prov}
+		{BEGIN addSearch_Telp}
+			<a href="#" id="addSearchControl_Telp" class="addSearchControl" {$addSearchControl_Telp_attrs}>Telp</a><br>
+		{END addSearch_Telp}
+		{BEGIN addSearch_Position}
+			<a href="#" id="addSearchControl_Position" class="addSearchControl" {$addSearchControl_Position_attrs}>Position</a><br>
+		{END addSearch_Position}
+		{BEGIN addSearch_Classification}
+			<a href="#" id="addSearchControl_Classification" class="addSearchControl" {$addSearchControl_Classification_attrs}>Classification</a><br>
+		{END addSearch_Classification}
+		{BEGIN addSearch_Section}
+			<a href="#" id="addSearchControl_Section" class="addSearchControl" {$addSearchControl_Section_attrs}>Section</a><br>
+		{END addSearch_Section}
+		{BEGIN addSearch_Department}
+			<a href="#" id="addSearchControl_Department" class="addSearchControl" {$addSearchControl_Department_attrs}>Department</a><br>
+		{END addSearch_Department}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

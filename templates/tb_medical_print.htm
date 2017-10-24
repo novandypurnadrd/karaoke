@@ -1,0 +1,292 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>MEDICAL</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_fieldheader}
+	<b>Id</b>
+	{END id_fieldheader}
+</th>
+{END id_fieldheadercolumn}
+	{BEGIN nip_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN nip_fieldheader}
+	<b>NIP</b>
+	{END nip_fieldheader}
+</th>
+{END nip_fieldheadercolumn}
+	{BEGIN dept_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN dept_fieldheader}
+	<b>DEPARTEMEN</b>
+	{END dept_fieldheader}
+</th>
+{END dept_fieldheadercolumn}
+	{BEGIN section_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN section_fieldheader}
+	<b>SECTION</b>
+	{END section_fieldheader}
+</th>
+{END section_fieldheadercolumn}
+	{BEGIN posisi_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN posisi_fieldheader}
+	<b>POSISI</b>
+	{END posisi_fieldheader}
+</th>
+{END posisi_fieldheadercolumn}
+	{BEGIN payfor_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN payfor_fieldheader}
+	<b>UNTUK PEMBAYARAN</b>
+	{END payfor_fieldheader}
+</th>
+{END payfor_fieldheadercolumn}
+	{BEGIN amount_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN amount_fieldheader}
+	<b>JUMLAH PEMBAYARAN</b>
+	{END amount_fieldheader}
+</th>
+{END amount_fieldheadercolumn}
+	{BEGIN tglbayar_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tglbayar_fieldheader}
+	<b>TGL PEMBAYARAN</b>
+	{END tglbayar_fieldheader}
+</th>
+{END tglbayar_fieldheadercolumn}
+	{BEGIN referensi_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN referensi_fieldheader}
+	<b>REFERENSI</b>
+	{END referensi_fieldheader}
+</th>
+{END referensi_fieldheadercolumn}
+	{BEGIN nama_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN nama_fieldheader}
+	<b>NAMA</b>
+	{END nama_fieldheader}
+</th>
+{END nama_fieldheadercolumn}
+	{BEGIN namapayfor_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN namapayfor_fieldheader}
+	<b>NAMA CLAIM</b>
+	{END namapayfor_fieldheader}
+</th>
+{END namapayfor_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN id_fieldcolumn}
+<td  class="runner-cc {$id_class}" {$id_style}>
+	{$id_value}
+</td>
+{END id_fieldcolumn}
+	{BEGIN nip_fieldcolumn}
+<td  class="runner-cc {$nip_class}" {$nip_style}>
+	{$nip_value}
+</td>
+{END nip_fieldcolumn}
+	{BEGIN dept_fieldcolumn}
+<td  class="runner-cc {$dept_class}" {$dept_style}>
+	{$dept_value}
+</td>
+{END dept_fieldcolumn}
+	{BEGIN section_fieldcolumn}
+<td  class="runner-cc {$section_class}" {$section_style}>
+	{$section_value}
+</td>
+{END section_fieldcolumn}
+	{BEGIN posisi_fieldcolumn}
+<td  class="runner-cc {$posisi_class}" {$posisi_style}>
+	{$posisi_value}
+</td>
+{END posisi_fieldcolumn}
+	{BEGIN payfor_fieldcolumn}
+<td  class="runner-cc {$payfor_class}" {$payfor_style}>
+	{$payfor_value}
+</td>
+{END payfor_fieldcolumn}
+	{BEGIN amount_fieldcolumn}
+<td  class="runner-cc {$amount_class}" {$amount_style}>
+	{$amount_value}
+</td>
+{END amount_fieldcolumn}
+	{BEGIN tglbayar_fieldcolumn}
+<td  class="runner-cc {$tglbayar_class}" {$tglbayar_style}>
+	{$tglbayar_value}
+</td>
+{END tglbayar_fieldcolumn}
+	{BEGIN referensi_fieldcolumn}
+<td  class="runner-cc {$referensi_class}" {$referensi_style}>
+	{$referensi_value}
+</td>
+{END referensi_fieldcolumn}
+	{BEGIN nama_fieldcolumn}
+<td  class="runner-cc {$nama_class}" {$nama_style}>
+	{$nama_value}
+</td>
+{END nama_fieldcolumn}
+	{BEGIN namapayfor_fieldcolumn}
+<td  class="runner-cc {$namapayfor_class}" {$namapayfor_style}>
+	{$namapayfor_value}
+</td>
+{END namapayfor_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_fieldfootercolumn}
+{BEGIN nip_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END nip_fieldfootercolumn}
+{BEGIN dept_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END dept_fieldfootercolumn}
+{BEGIN section_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END section_fieldfootercolumn}
+{BEGIN posisi_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END posisi_fieldfootercolumn}
+{BEGIN payfor_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END payfor_fieldfootercolumn}
+{BEGIN amount_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END amount_fieldfootercolumn}
+{BEGIN tglbayar_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tglbayar_fieldfootercolumn}
+{BEGIN referensi_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END referensi_fieldfootercolumn}
+{BEGIN nama_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END nama_fieldfootercolumn}
+{BEGIN namapayfor_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END namapayfor_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>
